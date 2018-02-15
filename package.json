@@ -1,0 +1,19 @@
+{
+    "name": "ntc-mail",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "amqplib": "0.5.1",
+        "babel-register": "^6.24.1",
+        "bluebird": "3.5.0",
+        "minimist": "^1.1.2",
+        "q": "^1.4.1",
+        "underscore": "1.8.3",
+        "jsonwebtoken": "7.4.1",
+        "nodemailer": "4.0.1",
+        "node-cache": "4.1.1"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
