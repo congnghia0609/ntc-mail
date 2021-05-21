@@ -12,7 +12,7 @@ Install RabbitMQ from [https://www.rabbitmq.com/](https://www.rabbitmq.com/)
 
 ## Setup nodejs && npm && nvm
 
-```
+```shell
 # nodejs
 sudo apt-get update
 ## nodejs default
@@ -86,7 +86,7 @@ View and modify file configuration in folder **./config/config.js**
 
 ## Start ntc-mail  
   
-```
+```shell
 cd ntc-chat
 npm install
 ## NODE_ENV: development || testing || staging || production || local
@@ -96,7 +96,7 @@ node app.js
 
 or start node project by PM2.  
 
-```
+```shell
 # list project nodejs.
 pm2 list
 
@@ -137,7 +137,7 @@ pw: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   
 ## 1.1. Convention.
 
-```
+```js
 // Constant Email.
 const MAIL_TOPIC = 'email';
 const MAIL_JOB = 'MAIL_Job';
@@ -147,15 +147,15 @@ const MAIL_USER = 'MAIL_User';
 
 ## 1.2. Send Email.
 
-```
+```js
 var data = {
     topic: MAIL_TOPIC,
     type: MAIL_JOB,
     email: {
         from: '"ntc" <user1@gmail.com>', // sender address
-        to: 'nghia1@inspilab.com, nghia2@inspilab.com', // list of receivers
-        cc: 'nghia3@inspilab.com, nghia4@inspilab.com',
-        bcc: 'nghia5@inspilab.com, nghia6@inspilab.com',
+        to: 'nghia1@gmail.com, nghia2@gmail.com', // list of receivers
+        cc: 'nghia3@gmail.com, nghia4@gmail.com',
+        bcc: 'nghia5@gmail.com, nghia6@gmail.com',
         subject: '[ntc] Hello', // Subject line
         html: '<b>Hello world ?</b>', // html body
         attachments: [
@@ -214,7 +214,7 @@ email_producer.sendEmail(data);
   
 Code process message email in **function processMessage** in file **rbEmailConsumer.js**  
 
-```
+```js
 ...
 function processMessage(msg) {
     // console.log(' [x] consumer recv | %s: %s', msg.fields.routingKey, msg.content.toString());
